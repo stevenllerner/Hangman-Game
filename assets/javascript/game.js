@@ -1,7 +1,7 @@
 //Make selLetter a global variable
 
 //	Set number of guesses allowed
-	var guessRemain = 6
+	var guessRemain = 12
 	//Pick a word
 	var i=1;
 	var wordBank = [
@@ -20,7 +20,6 @@
 	var word = wordBank[i].toUpperCase();
 	//Check
 	console.log (word);
-
 	//Determine the number of letters and spaces in the word
 	console.log (word.length);
 
@@ -51,34 +50,45 @@
    // }
 
 	var guessLetter = "";
+	var guessedLetters = "";
+	var numOfMatches;
 	document.onkeyup = function (event) {
-		guessLetter = event.key.toUpperCase();
-		console.log(guessLetter);
- 	document.getElementById("welcome").innerHTML = "Welcome to the Game";
+		document.getElementById("welcome").innerHTML = "Welcome to the game";
+		document.getElementById("instructions").innerHTML = "Please select a letter";
+			if (guessRemain > 0) {
+				document.onkeyup = function (event) {
+					guessLetter = event.key.toUpperCase();
+					console.log(guessLetter);
+					guessedLetters = guessedLetters + guessLetter;
+					document.getElementById("guessedLetters").innerHTML = guessedLetters;
+					//Compare selected letter to letters in word
+					numOfMatches = 0;
+					for (k=0; k < word.length; k++){
+
+						if (word[k] === guessLetter) {
+							display[k] = guessLetter;
+							numOfMatches = numOfMatches + 1;
+							console.log(display);
+						} 
+					}
+					//Update display
+					console.log(display);
+					document.getElementById("wordStatus").innerHTML = display;
+					//Update remaining guesses
+					if (numOfMatches < 1) {
+						guessRemain = guessRemain -1;
+					}
+					document.getElementById("guessesRemaining").innerHTML = guessRemain;		
+				}		
+			}
+
+
+		
+ 	
 	}
 
-	document.getElementById("guessedLetters").innerHTML = guessLetter;
+	
 
-//Compare selected letter to letters in word
-	for (k=0; k < word.length; k++){
-
-		if (word[k] === guessLetter) {
-			display[k] = guessLetter;
-			var match = true;
-		} else {
-			var match = false;
-		}
-	}
-	console.log(match);
-	console.log(display);
-
-	if (match === false){
-		guessRemain = guessRemain - 1; 
-	}
-
-//Update id="wordStatus" and id="guessesRemaining"
-	document.getElementById("wordStatus").innerHTML = display;
-	document.getElementById("guessesRemaining").innerHTML = guessRemain;
 
 //	// update word
 
