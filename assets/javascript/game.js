@@ -95,8 +95,9 @@ document.onkeyup = function (event) {
 		allGuessedLetters (guessedLetters, guessLetter);
 		guessedLetters = z;
 
-		if (y ,== 0) {
+		if (y === 0) {
 			document.getElementById("outcome").innerHTML = "Sorry, you lost this game. Try again!";
+			
 		}
 		if (display.includes("_") !== true) {
 			document.getElementById("outcome").innerHTML = "Congratulations! You've won this game!";
