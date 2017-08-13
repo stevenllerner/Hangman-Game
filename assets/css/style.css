@@ -1,3 +1,36 @@
+body {
+	background-color: black;
+	font-family: verdana, helvetica, arial;
+	color: white;
+	height: 100%;
+}
+
+.page-header {
+	background-image: url("../../assets/images/nycBanner.jpg");
+ 	height: 250px;
+	position: top;
+	text-align: center;
+}
+
+.empireState {
+	max-height: 400px;
+}
+
+.chryslerBldg {
+	max-height: 400px;
+}
+
+.footer {
+	margin-top: 20px;
+	background-color: #333333;
+}
+
+.copyR{
+	text-align: center;
+	margin-top: 20px;
+}
+
 h3 {
 	letter-spacing: 0.5em;
 }
+

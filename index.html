@@ -3,34 +3,59 @@
 
 <head>
 	<html lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<title>Hangman-NY-Style</title>
+	<title>NY-Style-Hangman</title>
 
 </head>
 <body>
 
-	<header>
-		<h1>Hangman New York Style</h1>
-	</header>
-
-	<div class="container">
-		<h2>Please press any key to start</h2>
-		<p id="welcome"></p>
-		<p id="instructions"></p>
-		<h2 id="numberOfWins"></h2>
-		<p id="totNumOfWins"></p>
-		<h2 id="currentWord"></h2>
-		<h3 id="wordStatus"></h3>
-		<h2 id="numOfGuessesRemaining"></h2>
-		<h3 id="guessesRemaining"></h3>
-		<h2 id="lettersAlreadyGuessed"></h2>
-		<h3 id="guessedLetters"></h3>
-		<h2 id="outcome"></h2>
+<div class="page-header">
+ 	<h1>New York Style</h1>
+	<h2>Hangman Game</h2>
+</div>
 
 
+<div class="container-fluid">
+
+	<div class="row">
+
+		<div class="col-md-2" >
+			<img class=empireState src="assets/images/empireStateBldg.jpg">
+		</div>
+		<div class="col-md-8">
+			<h4>Please press any key to start</h4>
+			<h2 id="welcome"></h2>
+			<h4 id="instructions"></h4>
+			<h4 id="numberOfWins"></h4>
+			<h4 id="totNumOfWins"></h4>
+			<h2 id="currentWord"></h2>
+			<h3 id="wordStatus"></h3>
+			<h4 id="numOfGuessesRemaining"></h4>
+			<h4 id="guessesRemaining"></h4>
+			<h4 id="lettersAlreadyGuessed"></h4>
+			<h3 id="guessedLetters"></h3>
+			<h2 id="outcome"></h2>
+		</div>
+		
+		<div class="col-md-2 chryslerBldg" >
+			<img class=chryslerBldg src="assets/images/chryslerBldg.jpg">
+		</div>	
 	</div>
+
+	<div class="row footer">
+		<div class="col-md-12">
+			<p class="copyR">&copy Copyright 2017 Steven L Lerner</p>
+		</div>
+	</div>
+
+
+</div>
 
 
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
