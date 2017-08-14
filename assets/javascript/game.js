@@ -1,6 +1,8 @@
 //Define variables
 var guessRemain = 12; 	// Number of guesses allowed
-var i = 1;				// Index
+
+
+var i = getRandomInt(1,10);		// Randomly generated index
 var wordBank = [		// List of words to be guesses
 	'Guggenheim Museum',
 	'Central Park',
@@ -22,6 +24,13 @@ var numOfMatches;			// Number of times selected letter matches letters in word
 var numOfWins = 0;			// Number of games won by player
 
 //FUNCTIONS
+
+//Random integer generator for word selection
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 //Sets up initial sequence of dashes
 function initialDisplay (word) {
 	display = "";
@@ -97,7 +106,6 @@ document.onkeyup = function (event) {
 
 		if (y === 0) {
 			document.getElementById("outcome").innerHTML = "Sorry, you lost this game. Try again!";
-			
 		}
 		if (display.includes("_") !== true) {
 			document.getElementById("outcome").innerHTML = "Congratulations! You've won this game!";
